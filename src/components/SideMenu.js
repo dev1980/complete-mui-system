@@ -1,5 +1,19 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  sideMenu: {
+    display: "flex",
+    flexDirection: "column",
+    width: "320px",
+    height: "100vh",
+    position: "absolute",
+    left: "0px",
+    backgroundColor: "#253053;",
+  },
+});
 
 export default function SideMenu() {
-  return <div className="side-menu"></div>;
+  const classes = useStyles();
+  return <div className={classes.sideMenu}></div>;
 }
